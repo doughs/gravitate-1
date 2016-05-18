@@ -1,0 +1,80 @@
+// NAVIGATION
+nav {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	width: 100%;
+	background-color: $offwhite;
+	background-color: rgba($offwhite, .6);
+	text-transform: uppercase;
+	cursor: pointer;
+	// CLEAR FLOAT
+	&::after {
+		clear: both;
+		visibility: hidden;
+		content: "";
+		display: block;
+		height: 0;
+	}
+}
+nav .home-logo {
+	display: inline-block;
+	float: left;
+	width: 20%;
+	max-width: 75px;
+	position: relative;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		max-width: 100px;
+		max-height: 76px;
+	}
+
+	// SCREEN MIN-WIDTH 1024px
+	@include tablet-w() {
+		width: 7.91%;
+		max-width: none;
+		max-height: none;
+	}
+}
+nav i {
+	display: block;
+	float: right;
+	padding: 14px 10px 0 0;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		display: none !important;
+	}
+}
+nav ul {
+	list-style: none;
+	display: block;
+	position: relative;
+	float: right;
+	width: 100%;
+	margin: 0;
+
+	// SCREEN MIN-WIDTH 600px
+	@include tablet() {
+		display: inline-block;
+		width: auto;
+		margin-top: 3%;
+	}
+
+	// SCREEN MIN-WIDTH 1024px
+	@include tablet-w() {
+		margin-top: 2%;
+	}
+	li {
+		padding: 10px 20px;
+
+		// SCREEN MIN-WIDTH 600px
+		@include tablet() {
+			display: inline-block;
+			width: 100px;
+			padding: 0;
+			text-align: center;
+		}
+	}
+}
