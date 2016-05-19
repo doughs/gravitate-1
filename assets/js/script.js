@@ -4,18 +4,18 @@ $(document).ready(function(){
 	----------------------------------------------*/
 	if($(window).width() < 601) {
 		// HIDE MENU
-		$('li').css({"display":"none"});
+		$('.menu-list').css({"display":"none"});
 		$('#menu').click(function(){
-			$('li').toggle();
+			$('.menu-list').toggle();
 		});
 		$('#about-link').click(function() {
-			$('li').hide();
+			$('.menu-list').hide();
 		});
 		$('#demo-link').click(function() {
-			$('li').hide();
+			$('.menu-list').hide();
 		});
 		$('#contact-link').click(function() {
-			$('li').hide();
+			$('.menu-list').hide();
 		});
 	}
 	/*----------------------------------------------
