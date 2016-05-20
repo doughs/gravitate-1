@@ -23,6 +23,11 @@ img {
 	width: 100%;
 	max-width: 100%;
 }
+.gravitate {
+	text-transform: lowercase;
+	color: $orange;
+	font-size: 1.28em;
+}
 
 // INTRODUCTION
 .intro {
@@ -359,7 +364,7 @@ blockquote {
 			display: inline-block;
 			float: right;
 			width: 45%;
-			vertical-align: middle;
+			vertical-align: top;
 			margin: 12% 5%;
 		}
 
@@ -435,7 +440,10 @@ button {
 	border: none;
 	margin: 50px 5%;
 	padding: 20px 0;
-	background-color: orange;
+	background-color: $orange;
+	text-transform: uppercase;
+	color: $offwhite;
+	font-weight: bold;
 
 	// SCREEN MIN-WIDTH 600px
 	@include tablet() {
@@ -494,13 +502,44 @@ button {
 		width: 40%;
 	}
 }
+// FORM
+form {
+	width: 100%;
+	border-top: 2px solid $orange;
+	padding-top: 16px;
+	// CLEAR FLOAT
+	&::after {
+		clear: both;
+		visibility: hidden;
+		content: "";
+		display: block;
+		height: 0;
+	}
+}
+label, input {
+	display: block;
+}
+label {
+	width: 15%;
+	margin-bottom: 6px;
+}
+input, textarea {
+	width: 99%;
+	margin-bottom: 10px;
+	// border-color: $orange;
+}
+.sub-button {
+	width: 100px;
+	float: right;
+	margin-right: 0;
+}
 
 // FOOTER
 footer {
 	width: 96%;
 	margin-top: 50px 0;
 	padding: 20px 2%;
-	background-color: orange;
+	background-color: $orange;
 }
 .copy {
 	text-align: center;
