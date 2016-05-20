@@ -460,10 +460,48 @@ button {
 	}
 }
 
+// SPONSOR PAGE
+
+// HEADING
+.sponsor-heading {
+	width: 100%;
+	text-align: center;
+	background-color: $offwhite;
+	padding: 10px 0;
+	margin-bottom: 50px;
+}
+.sponsor {
+	margin-bottom: 60px;
+}
+// DESCRIPTION
+.sponsor-description {
+	width: 100%;
+
+	@include tablet() {
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	@include laptop() {
+		width: 50%;
+	}
+
+	@include desktop() {
+		width: 46%;
+	}
+
+	@include lgscreen() {
+		width: 40%;
+	}
+}
+
 // FOOTER
 footer {
 	width: 96%;
 	margin-top: 50px 0;
 	padding: 20px 2%;
 	background-color: orange;
+}
+.copy {
+	text-align: center;
 }
